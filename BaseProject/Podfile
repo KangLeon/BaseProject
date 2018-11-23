@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'BaseProject' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+pod 'AFNetworking', '~> 3.2.1'
+pod 'Masonry', '~> 1.1.0'
+pod 'ReactiveObjC', '~> 3.1.0'
+pod 'Reachability', '~> 3.2'
+pod 'lottie-ios', '~> 2.5.2'
+pod 'MJRefresh', '~> 3.1.15.7'
+pod 'MJExtension', '~> 3.0.15.1'
+pod 'MMKV', '~> 1.0.13'
+pod 'SDWebImage', '~> 5.0.0-beta3'
+
+  # Pods for BaseProject
+
+  target 'BaseProjectTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'BaseProjectUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
