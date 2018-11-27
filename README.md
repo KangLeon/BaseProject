@@ -1,2 +1,2 @@
 # BaseProject
-Base code,which will be needed in a new project.
+Base code，will be needed in a new project.
