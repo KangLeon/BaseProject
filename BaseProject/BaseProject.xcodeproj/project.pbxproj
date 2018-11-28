@@ -24,6 +24,9 @@
 		84E6499921A7D8A3009302D7 /* LYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6499121A7D8A3009302D7 /* LYTableView.m */; };
 		84E6499A21A7D8A3009302D7 /* LYTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6499321A7D8A3009302D7 /* LYTableViewInfo.m */; };
 		84E6499B21A7D8A3009302D7 /* LYTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6499521A7D8A3009302D7 /* LYTableViewSectionInfo.m */; };
+		84E649B121ACE985009302D7 /* JYAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E649B021ACE985009302D7 /* JYAFHTTPSessionManager.m */; };
+		84E649B621AD09AF009302D7 /* JYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E649B521AD09AF009302D7 /* JYModel.m */; };
+		84E649B921AD0A89009302D7 /* JYViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E649B821AD0A89009302D7 /* JYViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,14 @@
 		84E6499321A7D8A3009302D7 /* LYTableViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableViewInfo.m; sourceTree = "<group>"; };
 		84E6499421A7D8A3009302D7 /* LYTableViewCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTableViewCellInfo.h; sourceTree = "<group>"; };
 		84E6499521A7D8A3009302D7 /* LYTableViewSectionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableViewSectionInfo.m; sourceTree = "<group>"; };
+		84E649AF21ACE985009302D7 /* JYAFHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYAFHTTPSessionManager.h; sourceTree = "<group>"; };
+		84E649B021ACE985009302D7 /* JYAFHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAFHTTPSessionManager.m; sourceTree = "<group>"; };
+		84E649B221ACEBBE009302D7 /* DefineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineHeader.h; sourceTree = "<group>"; };
+		84E649B321ACEC07009302D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		84E649B421AD09AF009302D7 /* JYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYModel.h; sourceTree = "<group>"; };
+		84E649B521AD09AF009302D7 /* JYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYModel.m; sourceTree = "<group>"; };
+		84E649B721AD0A89009302D7 /* JYViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYViewModel.h; sourceTree = "<group>"; };
+		84E649B821AD0A89009302D7 /* JYViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYViewModel.m; sourceTree = "<group>"; };
 		CD2D6B22FC5DFDD5DFB37D3E /* libPods-BaseProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4ED1735B379093E381A0A3 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,13 +157,14 @@
 		84E6495621A7D897009302D7 /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
-				84E649A621A7E0F8009302D7 /* ViewModel */,
-				84E649A321A7D961009302D7 /* Define */,
-				84E649A221A7D951009302D7 /* Resources */,
-				84E6499F21A7D91F009302D7 /* Util */,
-				84E6499E21A7D8F8009302D7 /* ViewController */,
 				84E6499D21A7D8EF009302D7 /* Model */,
 				84E6499C21A7D8E6009302D7 /* View */,
+				84E6499E21A7D8F8009302D7 /* ViewController */,
+				84E649A621A7E0F8009302D7 /* ViewModel */,
+				84E649A221A7D951009302D7 /* Resources */,
+				84E6499F21A7D91F009302D7 /* Util */,
+				84E649A321A7D961009302D7 /* Define */,
+				84E649AE21ACE751009302D7 /* Common */,
 				84E6495721A7D897009302D7 /* AppDelegate.h */,
 				84E6495821A7D897009302D7 /* AppDelegate.m */,
 				84E6495A21A7D897009302D7 /* ViewController.h */,
@@ -213,6 +225,8 @@
 		84E6499D21A7D8EF009302D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84E649B421AD09AF009302D7 /* JYModel.h */,
+				84E649B521AD09AF009302D7 /* JYModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +272,8 @@
 		84E649A321A7D961009302D7 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				84E649B221ACEBBE009302D7 /* DefineHeader.h */,
+				84E649B321ACEC07009302D7 /* PrefixHeader.pch */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -273,8 +289,19 @@
 		84E649A621A7E0F8009302D7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84E649B721AD0A89009302D7 /* JYViewModel.h */,
+				84E649B821AD0A89009302D7 /* JYViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84E649AE21ACE751009302D7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84E649AF21ACE985009302D7 /* JYAFHTTPSessionManager.h */,
+				84E649B021ACE985009302D7 /* JYAFHTTPSessionManager.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D440F5522510AB7E52574A6D /* Pods */ = {
@@ -287,7 +314,6 @@
 				2D81E85C7A3F95088810C128 /* Pods-BaseProjectUITests.debug.xcconfig */,
 				1552F3E7218F2497992A62B2 /* Pods-BaseProjectUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -519,12 +545,15 @@
 				84E6499A21A7D8A3009302D7 /* LYTableViewInfo.m in Sources */,
 				84E6499921A7D8A3009302D7 /* LYTableView.m in Sources */,
 				84E6495C21A7D897009302D7 /* ViewController.m in Sources */,
+				84E649B621AD09AF009302D7 /* JYModel.m in Sources */,
 				84E6496721A7D898009302D7 /* main.m in Sources */,
 				84E6499B21A7D8A3009302D7 /* LYTableViewSectionInfo.m in Sources */,
 				84E6495921A7D897009302D7 /* AppDelegate.m in Sources */,
 				84E6499721A7D8A3009302D7 /* LYTableViewCell.m in Sources */,
 				84E6499821A7D8A3009302D7 /* LYTableViewCellInfo.m in Sources */,
+				84E649B121ACE985009302D7 /* JYAFHTTPSessionManager.m in Sources */,
 				84E6499621A7D8A3009302D7 /* LYTableViewUserInfo.m in Sources */,
+				84E649B921AD0A89009302D7 /* JYViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +727,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22MKG4BGTP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/admin/Desktop/MyResposity/BaseProject/BaseProject/BaseProject/BaseProject/Define/PrefixHeader.pch;
 				INFOPLIST_FILE = BaseProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -716,6 +747,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22MKG4BGTP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/admin/Desktop/MyResposity/BaseProject/BaseProject/BaseProject/BaseProject/Define/PrefixHeader.pch;
 				INFOPLIST_FILE = BaseProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
