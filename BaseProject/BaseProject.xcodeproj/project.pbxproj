@@ -728,7 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22MKG4BGTP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/admin/Desktop/MyResposity/BaseProject/BaseProject/BaseProject/BaseProject/Define/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/jitengjiao/Desktop/MyResposity/BaseProject/BaseProject/BaseProject/Define/PrefixHeader.pch;
 				INFOPLIST_FILE = BaseProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -748,7 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22MKG4BGTP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/admin/Desktop/MyResposity/BaseProject/BaseProject/BaseProject/BaseProject/Define/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/jitengjiao/Desktop/MyResposity/BaseProject/BaseProject/BaseProject/Define/PrefixHeader.pch;
 				INFOPLIST_FILE = BaseProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
