@@ -26,6 +26,7 @@
 #define SNTrueHeight(initialHeight) initialHeight*(SCREEN_HEIGHT/768)
 #import "ViewController.h"
 #import <WebKit/WebKit.h>
+
 #import "AFNetworking.h"
 @interface ViewController ()<WKUIDelegate,WKNavigationDelegate,NSURLConnectionDelegate>
 @property(nonatomic,strong)WKWebView *webView;
@@ -37,6 +38,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+}
+
+-(void)loadRequest{
+    
+}
+
+-(void)loadWebView{
     //相当于登出
     //强制清除缓存，不清除打不开
     NSSet *websiteDataTypes = [WKWebsiteDataStore allWebsiteDataTypes];
@@ -96,20 +105,9 @@
         NSData *data = error.userInfo[@"com.alamofire.serialization.response.error.data"] ;
         NSString *errorStr = [[ NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"请求失败============%@",errorStr);
-        
-        
     }];
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
+
 -(WKWebView *)webView{
     if (!_webView) {
         _webView=[[WKWebView alloc] initWithFrame:CGRectMake(0, SNTrueHeight(100), SCREEN_WIDTH, SCREEN_HEIGHT)];
@@ -119,18 +117,19 @@
     }
     return _webView;
 }
+
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
     //receive a authenticate and challenge with the user credential
     //&& [challenge previousFailureCount] == 0
     if ([challenge.protectionSpace.authenticationMethod isEqualToString:@"NSURLAuthenticationMethodHTTPBasic"] )
     {
-        
+
         NSURLCredential *credentail = [NSURLCredential
                                        credentialWithUser:@"hero-user"
                                        password:@"hero1901!"
                                        persistence:NSURLCredentialPersistencePermanent];
-        
-        
+
+
         [[challenge sender] useCredential:credentail forAuthenticationChallenge:challenge];
     }
     else
