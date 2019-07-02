@@ -15,7 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        sharedJYAFHTTPSessionManager = [[JYAFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:JYHost]];
+        sharedJYAFHTTPSessionManager = [[JYAFHTTPSessionManager alloc] init];
         
         // 设置请求类型
         sharedJYAFHTTPSessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
